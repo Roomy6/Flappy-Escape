@@ -2,8 +2,10 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-.idea/
+.idea
 /res/META-INF
+
+Flappy-Guy.iml
 
 ### Eclipse ###
 .apt_generated
