@@ -23,6 +23,11 @@ public class BackgroundManager
         groundImage = loadBackground("/ground");
         prisonImage = loadBackground("/prison");
 
+        setupBackground();
+    }
+
+    public void setupBackground()
+    {
         bg1x = 0;
         bg2x = backgroundImage.getWidth();
 
@@ -31,7 +36,7 @@ public class BackgroundManager
 
         bgSpeed = 0.5f;
 
-        frgSpeed = 2f;
+        frgSpeed = 4;
     }
 
     public void update()

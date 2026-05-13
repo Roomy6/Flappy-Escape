@@ -10,6 +10,11 @@ public class ObjectSetter
     GamePanel game;
     Random random = new Random();
 
+    int x;
+    int gapSize;
+    int topPadding;
+    int bottomPadding;
+
     public ObjectSetter(GamePanel game)
     {
         this.game = game;
@@ -17,18 +22,13 @@ public class ObjectSetter
 
     public void setObject()
     {
-        int x = GamePanel.WINDOW_WIDTH;
-
-        int gapSize = game.TILE_SIZE * 5;
-        int topPadding = game.TILE_SIZE * 3;
-        int bottomPadding = GamePanel.WINDOW_HEIGHT - game.TILE_SIZE * 3;
+        resetObjects();
 
         /* Have a +2 for i due to adding a bottom pipe */
         for(int i = 0; i < game.objects.length; i += 2) {
             PipeObject pipe = new PipeObject(game);
 
             int minGapY = topPadding;
-
             int maxGapY = GamePanel.WINDOW_HEIGHT - gapSize - bottomPadding;
 
             if(maxGapY <= minGapY)
@@ -37,7 +37,6 @@ public class ObjectSetter
             }
 
             int gapY = random.nextInt(maxGapY - minGapY) + minGapY;
-
             gapY = (gapY / game.TILE_SIZE) * game.TILE_SIZE;
 
             pipe.worldX = x;
@@ -49,5 +48,19 @@ public class ObjectSetter
             /* Padding between pipes */
             x += game.TILE_SIZE * 8;
         }
+    }
+
+    public void resetObjects()
+    {
+        for (int i = 0; i < game.objects.length; i++)
+        {
+            game.objects[i] = null;
+        }
+
+        x = GamePanel.WINDOW_WIDTH * 2;
+
+        gapSize = game.TILE_SIZE * 5;
+        topPadding = game.TILE_SIZE * 3;
+        bottomPadding = GamePanel.WINDOW_HEIGHT - game.TILE_SIZE * 3;
     }
 }

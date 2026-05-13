@@ -51,6 +51,18 @@ public class KeyHandler implements KeyListener
             }
         }
 
+        if(game.gameState == game.gameOverState)
+        {
+            if(code == KeyEvent.VK_SPACE)
+            {
+                game.gameState = game.mainMenuState;
+                game.backgroundManager.setupBackground();
+                game.player.setupPlayer();
+                game.objectSetter.resetObjects();
+                game.objectSetter.setObject();
+            }
+        }
+
         /* DEBUG */
         if(code == KeyEvent.VK_L)
         {

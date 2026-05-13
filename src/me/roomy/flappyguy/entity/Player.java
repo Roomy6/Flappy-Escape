@@ -14,17 +14,17 @@ public class Player extends Entity
 
     public BufferedImage player;
 
+    private int targetX;
+    private int targetY;
+
+    private boolean transitioningToPlay = false;
+
     public Player(GamePanel game, KeyHandler keyHandler)
     {
         super(game, keyHandler);
 
         this.game = game;
         this.keyHandler = keyHandler;
-
-        speed = 5;
-        yVelocity = 0.0f;
-        rotationAngle = 0.0f;
-        rotationSpeed = 0.0f;
 
         hitBox = new Rectangle();
         hitBox.width = 32;
@@ -33,10 +33,26 @@ public class Player extends Entity
         width = game.TILE_SIZE;
         height = game.TILE_SIZE;
 
+        setupPlayer();
+
+        getImage();
+    }
+
+    public void setupPlayer()
+    {
+        speed = 4;
+        yVelocity = 0.0f;
+        rotationAngle = 0.0f;
+        rotationSpeed = 0.0f;
+
         worldY = 100;
         worldX = 280;
 
-        getImage();
+        targetX = worldX;
+        targetY = worldY;
+
+        isCollided = false;
+        hasCollided = false;
     }
 
     public void setYVelocity(int yDirection) {
@@ -48,12 +64,20 @@ public class Player extends Entity
         if(game.gameState == game.mainMenuState)
         {
             yVelocity = 0;
-            worldX = GamePanel.WINDOW_WIDTH / 4 - game.TILE_SIZE / 2;
-            worldY = GamePanel.WINDOW_HEIGHT / 4 - game.TILE_SIZE / 2;
         }
 
         if(game.gameState == game.playState)
         {
+            if(!transitioningToPlay)
+            {
+                targetX = GamePanel.WINDOW_WIDTH / 4 - game.TILE_SIZE / 2;
+                targetY = GamePanel.WINDOW_HEIGHT / 4 - game.TILE_SIZE / 2;
+
+                transitioningToPlay = true;
+            }
+
+            moveToTarget();
+
             if(keyHandler.canFlap(isCollided))
             {
                 setYVelocity(-speed);
@@ -85,6 +109,24 @@ public class Player extends Entity
                 if(worldY == GamePanel.WINDOW_HEIGHT - height)
                     game.gameState = game.gameOverState;
             }
+        }
+    }
+
+    private void moveToTarget()
+    {
+        float moveSpeed = 0.01f;
+
+        worldX += (targetX - worldX) * moveSpeed;
+        worldY += (targetY - worldY) * moveSpeed;
+
+        if(Math.abs(targetX - worldX) < 1)
+        {
+            worldX = targetX;
+        }
+
+        if(Math.abs(targetY - worldY) < 1)
+        {
+            worldY = targetY;
         }
     }
 
