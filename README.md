@@ -1,2 +1,21 @@
-# Flappy-Escape
-A super simple Flappy Bird like clone I made in pure Java
+# Flappy Escape
+[![Release](https://img.shields.io/github/v/release/Roomy6/Flappy-Escape?include_prereleases)](https://github.com/Roomy6/Flappy-Escape/releases/latest)
+![Status](https://img.shields.io/badge/status-RELEASE-orange)
+![Issues](https://img.shields.io/github/issues/Roomy6/Flappy-Escape)
+![Downloads](https://img.shields.io/github/downloads/Roomy6/Flappy-Escape/total)
+
+---
+
+![Banner Image](https://raw.githubusercontent.com/Roomy6/Flappy-Escape/refs/heads/main/img/banner.png)
+
+This is a Flappy Bird like game written in pure Java
+
+![Game Play GIF](https://raw.githubusercontent.com/Roomy6/Flappy-Escape/refs/heads/main/img/gameplay.gif)
+
+---
+## TODO
+
+A list of things I'm working on.
+
+- [ ] Remake PipeObject code and rendering
+
