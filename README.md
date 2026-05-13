@@ -1,6 +1,5 @@
 # Flappy Escape
 [![Release](https://img.shields.io/github/v/release/Roomy6/Flappy-Escape?include_prereleases)](https://github.com/Roomy6/Flappy-Escape/releases/latest)
-![Status](https://img.shields.io/badge/status-RELEASE-orange)
 ![Issues](https://img.shields.io/github/issues/Roomy6/Flappy-Escape)
 ![Downloads](https://img.shields.io/github/downloads/Roomy6/Flappy-Escape/total)
 
