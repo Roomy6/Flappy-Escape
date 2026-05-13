@@ -48,11 +48,9 @@ public class Player extends Entity
         worldY = 100;
         worldX = 280;
 
-        targetX = worldX;
-        targetY = worldY;
-
         isCollided = false;
         hasCollided = false;
+        transitioningToPlay = false;
     }
 
     public void setYVelocity(int yDirection) {
