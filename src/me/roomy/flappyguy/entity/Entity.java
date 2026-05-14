@@ -24,6 +24,7 @@ public class Entity
 
     public BufferedImage dummy;
 
+    public String action;
     public int actionCooldown = 0;
 
     public Rectangle hitBox = new Rectangle(0, 0, 32, 32);
