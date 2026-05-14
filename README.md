@@ -19,4 +19,4 @@ A list of things I'm working on.
 - [ ] Animate Main Menu
 - [ ] Make Game Over screen
 - [ ] Implement score system
-- [ ] Add Guard NPC
+- [x] Add Guard NPC
