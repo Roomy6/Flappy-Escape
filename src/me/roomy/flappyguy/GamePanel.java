@@ -23,7 +23,7 @@ public class GamePanel extends JPanel implements Runnable
     static final Dimension SCREEN_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
 
     public static final String GAME_NAME = "Flappy Escape";
-    public static final String VERSION = "Beta 0.0.2";
+    public static final String VERSION = "Beta 0.0.3";
     public static final String WINDOW_TITLE = GAME_NAME + " - " + VERSION;
 
     public final int TILE_SIZE = 38;
