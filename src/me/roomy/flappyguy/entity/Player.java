@@ -140,7 +140,6 @@ public class Player extends Entity
 
     public void draw(Graphics2D g2)
     {
-        BufferedImage image = player;
         AffineTransform old = g2.getTransform();
 
         int centerX = worldX + hitBox.width / 2;
@@ -153,7 +152,7 @@ public class Player extends Entity
                 worldY + height / 2.0
         );
 
-        g2.drawImage(image, worldX, worldY, width, height, null);
+        g2.drawImage(player, worldX, worldY, width, height, null);
 
         // Reset transform
         g2.setTransform(old);
