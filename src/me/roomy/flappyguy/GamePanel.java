@@ -1,6 +1,7 @@
 package me.roomy.flappyguy;
 
 import me.roomy.flappyguy.entity.Entity;
+import me.roomy.flappyguy.entity.Guard;
 import me.roomy.flappyguy.entity.Player;
 import me.roomy.flappyguy.handler.KeyHandler;
 import me.roomy.flappyguy.object.SuperObject;
@@ -43,6 +44,7 @@ public class GamePanel extends JPanel implements Runnable
 
     /* Entities and Objects */
     public Player player = new Player(this, keyHandler);
+    public Guard guard = new Guard(this, keyHandler);
     public SuperObject[] objects = new SuperObject[100];
     public Entity[] entity = new Entity[20];
 
@@ -135,6 +137,7 @@ public class GamePanel extends JPanel implements Runnable
         long updateStart = System.nanoTime();
 
         player.update();
+        guard.update();
         collisionManager.update();
         backgroundManager.update();
 
@@ -212,6 +215,7 @@ public class GamePanel extends JPanel implements Runnable
                 }
             }
 
+            guard.draw(g2);
             player.draw(g2);
             ui.draw(g2);
         }
