@@ -1,16 +1,13 @@
-package me.roomy.flappyguy;
+package me.roomy.flappyescape;
 
 import javax.swing.*;
-import java.awt.*;
 
-public class FlappyGuy
+public class FlappyEscape
 {
     public static void main(String[] args)
     {
-        GamePanel gamePanel;
-
         JFrame frame = new JFrame();
-        gamePanel = new GamePanel();
+        GamePanel gamePanel = new GamePanel();
 
         frame.setTitle(GamePanel.WINDOW_TITLE);
         frame.setResizable(false);

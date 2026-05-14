@@ -1,7 +1,7 @@
-package me.roomy.flappyguy.util;
+package me.roomy.flappyescape.util;
 
-import me.roomy.flappyguy.GamePanel;
-import me.roomy.flappyguy.object.PipeObject;
+import me.roomy.flappyescape.GamePanel;
+import me.roomy.flappyescape.object.PipeObject;
 
 import java.util.Random;
 

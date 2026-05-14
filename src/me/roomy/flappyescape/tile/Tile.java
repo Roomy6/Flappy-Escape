@@ -1,4 +1,4 @@
-package me.roomy.flappyguy.tile;
+package me.roomy.flappyescape.tile;
 
 import java.awt.image.BufferedImage;
 

@@ -1,6 +1,6 @@
-package me.roomy.flappyguy.handler;
+package me.roomy.flappyescape.handler;
 
-import me.roomy.flappyguy.GamePanel;
+import me.roomy.flappyescape.GamePanel;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

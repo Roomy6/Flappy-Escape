@@ -1,6 +1,6 @@
-package me.roomy.flappyguy.ui;
+package me.roomy.flappyescape.ui;
 
-import me.roomy.flappyguy.GamePanel;
+import me.roomy.flappyescape.GamePanel;
 
 import java.awt.*;
 
@@ -40,9 +40,12 @@ public class UI
     public void drawGameUI()
     {
         g2.setColor(Color.WHITE);
-        g2.setFont(new Font("Monospaced", Font.BOLD, 12));
 
-        g2.drawString("Press l for debug", 0, GamePanel.WINDOW_HEIGHT);
+        g2.setFont(new Font("Monospaced", Font.BOLD, 16));
+        //g2.drawString("Score: " + game.scoreManager.score, 5, 15);
+
+        g2.setFont(new Font("Monospaced", Font.BOLD, 12));
+        g2.drawString("Press l for debug", 5, GamePanel.WINDOW_HEIGHT - 5);
     }
 
     public void drawMainMenuScreen()
@@ -100,5 +103,6 @@ public class UI
         g2.setColor(Color.WHITE);
         g2.setFont(new Font("Monospaced", Font.BOLD, 24));
         g2.drawString("Game Over!", (GamePanel.WINDOW_WIDTH / 2) - 30 * 2, GamePanel.WINDOW_HEIGHT / 3);
+        g2.drawString("Press space to play again", (GamePanel.WINDOW_WIDTH / 2) - 70 * 2, GamePanel.WINDOW_HEIGHT / 2);
     }
 }

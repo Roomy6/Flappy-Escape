@@ -1,7 +1,7 @@
-package me.roomy.flappyguy.entity;
+package me.roomy.flappyescape.entity;
 
-import me.roomy.flappyguy.GamePanel;
-import me.roomy.flappyguy.handler.KeyHandler;
+import me.roomy.flappyescape.GamePanel;
+import me.roomy.flappyescape.handler.KeyHandler;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -130,7 +130,7 @@ public class Player extends Entity
 
     public void getImage()
     {
-        player = game.loadImage("/player");
+        player = game.textureManager.getTexture("Player");
     }
 
     public void rotatePlayer()

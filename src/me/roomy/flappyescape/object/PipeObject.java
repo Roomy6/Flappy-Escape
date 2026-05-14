@@ -1,6 +1,6 @@
-package me.roomy.flappyguy.object;
+package me.roomy.flappyescape.object;
 
-import me.roomy.flappyguy.GamePanel;
+import me.roomy.flappyescape.GamePanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -16,9 +16,8 @@ public class PipeObject extends SuperObject
 
     public PipeObject(GamePanel game)
     {
-        this.game = game;
+        super(game);
 
-        name = "Pipe";
         try {
             topPipe = ImageIO.read(getClass().getResourceAsStream("/pipeTop.png"));
             bottomPipe = ImageIO.read(getClass().getResourceAsStream("/pipeTop.png"));

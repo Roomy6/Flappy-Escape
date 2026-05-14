@@ -1,6 +1,6 @@
-package me.roomy.flappyguy.tile;
+package me.roomy.flappyescape.tile;
 
-import me.roomy.flappyguy.GamePanel;
+import me.roomy.flappyescape.GamePanel;
 
 public class TileManager
 {

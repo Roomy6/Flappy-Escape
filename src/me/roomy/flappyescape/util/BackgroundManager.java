@@ -1,6 +1,6 @@
-package me.roomy.flappyguy.util;
+package me.roomy.flappyescape.util;
 
-import me.roomy.flappyguy.GamePanel;
+import me.roomy.flappyescape.GamePanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

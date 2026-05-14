@@ -1,13 +1,10 @@
-package me.roomy.flappyguy.entity;
+package me.roomy.flappyescape.entity;
 
-import me.roomy.flappyguy.GamePanel;
-import me.roomy.flappyguy.handler.KeyHandler;
-import me.roomy.flappyguy.util.ScaleManager;
+import me.roomy.flappyescape.GamePanel;
+import me.roomy.flappyescape.handler.KeyHandler;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.Random;
 
 public class Entity

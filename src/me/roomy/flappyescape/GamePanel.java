@@ -1,21 +1,18 @@
-package me.roomy.flappyguy;
+package me.roomy.flappyescape;
 
-import me.roomy.flappyguy.entity.Entity;
-import me.roomy.flappyguy.entity.Guard;
-import me.roomy.flappyguy.entity.Player;
-import me.roomy.flappyguy.handler.KeyHandler;
-import me.roomy.flappyguy.object.SuperObject;
-import me.roomy.flappyguy.ui.UI;
-import me.roomy.flappyguy.util.BackgroundManager;
-import me.roomy.flappyguy.util.CollisionManager;
-import me.roomy.flappyguy.util.ObjectSetter;
-import me.roomy.flappyguy.util.ScaleManager;
+import me.roomy.flappyescape.entity.Entity;
+import me.roomy.flappyescape.entity.Guard;
+import me.roomy.flappyescape.entity.Player;
+import me.roomy.flappyescape.handler.KeyHandler;
+import me.roomy.flappyescape.object.SuperObject;
+import me.roomy.flappyescape.ui.UI;
+import me.roomy.flappyescape.util.BackgroundManager;
+import me.roomy.flappyescape.util.CollisionManager;
+import me.roomy.flappyescape.util.ObjectSetter;
+import me.roomy.flappyescape.util.TextureManager;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class GamePanel extends JPanel implements Runnable
 {
@@ -41,6 +38,7 @@ public class GamePanel extends JPanel implements Runnable
     public ObjectSetter objectSetter = new ObjectSetter(this);
     public CollisionManager collisionManager = new CollisionManager(this);
     public BackgroundManager backgroundManager = new BackgroundManager(this);
+    public TextureManager textureManager = new TextureManager(this);
 
     /* Entities and Objects */
     public Player player = new Player(this, keyHandler);
@@ -246,19 +244,5 @@ public class GamePanel extends JPanel implements Runnable
 
         /* Helps with the stupid no input lag or whatever */
         Toolkit.getDefaultToolkit().sync();
-    }
-
-    public BufferedImage loadImage(String path) {
-        ScaleManager scaleManager = new ScaleManager();
-        BufferedImage image = null;
-
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream(path + ".png"));
-            image = scaleManager.scaledImage(image, TILE_SIZE, TILE_SIZE);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-
-        return image;
     }
 }

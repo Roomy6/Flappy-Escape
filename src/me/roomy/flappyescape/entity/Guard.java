@@ -1,7 +1,7 @@
-package me.roomy.flappyguy.entity;
+package me.roomy.flappyescape.entity;
 
-import me.roomy.flappyguy.GamePanel;
-import me.roomy.flappyguy.handler.KeyHandler;
+import me.roomy.flappyescape.GamePanel;
+import me.roomy.flappyescape.handler.KeyHandler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -67,7 +67,7 @@ public class Guard extends Entity
 
     public void getImage()
     {
-        guard = game.loadImage("/guard");
+        guard = game.textureManager.getTexture("Guard");
     }
 
     public void update()
