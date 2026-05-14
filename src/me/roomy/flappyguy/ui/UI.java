@@ -25,6 +25,8 @@ public class UI
         }
 
         /* Play State */
+        if(game.gameState == game.playState)
+            drawGameUI();
 
         /* Pause State */
 
@@ -33,6 +35,14 @@ public class UI
         {
             drawGameOverScreen();
         }
+    }
+
+    public void drawGameUI()
+    {
+        g2.setColor(Color.WHITE);
+        g2.setFont(new Font("Monospaced", Font.BOLD, 12));
+
+        g2.drawString("Press l for debug", 0, GamePanel.WINDOW_HEIGHT);
     }
 
     public void drawMainMenuScreen()
