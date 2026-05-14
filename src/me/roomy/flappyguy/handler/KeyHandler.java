@@ -60,6 +60,7 @@ public class KeyHandler implements KeyListener
                 game.player.setupPlayer();
                 game.objectSetter.resetObjects();
                 game.objectSetter.setObject();
+                game.guard.setupGuard();
             }
         }
 
