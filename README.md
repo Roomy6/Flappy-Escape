@@ -9,12 +9,14 @@
 
 This is a Flappy Bird like game written in pure Java
 
-![Game Play GIF](https://raw.githubusercontent.com/Roomy6/Flappy-Escape/refs/heads/main/img/gameplay.gif)
-
 ---
 ## TODO
 
 A list of things I'm working on.
 
 - [ ] Remake PipeObject code and rendering
-
+- [ ] Add sound engine
+- [ ] Animate Main Menu
+- [ ] Make Game Over screen
+- [ ] Implement score system
+- [ ] Add Guard NPC
