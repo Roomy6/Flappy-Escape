@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.roomy'
+version = 'b0.0.3'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['res']
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'me.roomy.flappyescape.FlappyEscape'
+        )
+    }
+}
