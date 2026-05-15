@@ -6,10 +6,7 @@ import me.roomy.flappyescape.entity.Player;
 import me.roomy.flappyescape.handler.KeyHandler;
 import me.roomy.flappyescape.object.SuperObject;
 import me.roomy.flappyescape.ui.UI;
-import me.roomy.flappyescape.util.BackgroundManager;
-import me.roomy.flappyescape.util.CollisionManager;
-import me.roomy.flappyescape.util.ObjectSetter;
-import me.roomy.flappyescape.util.TextureManager;
+import me.roomy.flappyescape.util.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,6 +45,7 @@ public class GamePanel extends JPanel implements Runnable
 
     /* UI */
     public UI ui = new UI(this);
+    public FontUtil fontUtil = new FontUtil("font.png", 16, 16);
 
     /* Game States */
     public int gameState;

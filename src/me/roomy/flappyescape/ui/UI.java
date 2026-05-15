@@ -1,6 +1,8 @@
 package me.roomy.flappyescape.ui;
 
 import me.roomy.flappyescape.GamePanel;
+import me.roomy.flappyescape.util.FontUtil;
+import me.roomy.flappyescape.util.Vector2f;
 
 import java.awt.*;
 
@@ -40,9 +42,13 @@ public class UI
     public void drawGameUI()
     {
         g2.setColor(Color.WHITE);
+        String text = "Hello World!";
 
         g2.setFont(new Font("Monospaced", Font.BOLD, 16));
         //g2.drawString("Score: " + game.scoreManager.score, 5, 15);
+
+        int x = GamePanel.WINDOW_WIDTH / 2 - 8 * 44;
+        int y = 64;
 
         g2.setFont(new Font("Monospaced", Font.BOLD, 12));
         g2.drawString("Press l for debug", 5, GamePanel.WINDOW_HEIGHT - 5);
@@ -78,7 +84,6 @@ public class UI
         g2.drawString(playText, playTextX + 5, 200 + 5);
 
 
-
         g2.setColor(Color.WHITE);
 
         g2.setFont(new Font("Monospaced", Font.BOLD, 50));
@@ -92,6 +97,10 @@ public class UI
 
         g2.setFont(new Font("Monospaced", Font.BOLD, 40));
         g2.drawString(playText, playTextX, 200);
+
+        String layout = "Custom Font and sprite sheet rendering test!";
+
+        Sprite.drawStringWithShadow(g2, game.fontUtil, layout, new Vector2f(0, 0), 16, 16, 13, 0);
     }
 
     public void drawGameOverScreen()
