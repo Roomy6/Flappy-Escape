@@ -21,3 +21,5 @@ A list of things I'm working on.
 - [ ] Implement score system
 - [x] Add Guard NPC
 - [ ] Better collision manager
+- [ ] Fix warning
+- [ ] Add a build guide
