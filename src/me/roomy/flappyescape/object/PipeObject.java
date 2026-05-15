@@ -18,19 +18,15 @@ public class PipeObject extends SuperObject
     {
         super(game);
 
-        try {
-            topPipe = ImageIO.read(getClass().getResourceAsStream("/pipeTop.png"));
-            bottomPipe = ImageIO.read(getClass().getResourceAsStream("/pipeTop.png"));
-            basePipe = ImageIO.read(getClass().getResourceAsStream("/pipeBase.png"));
+        topPipe = game.textureManager.getTexture("pipeTop");
+        bottomPipe = game.textureManager.getTexture("pipeTop");
+        basePipe = game.textureManager.getTexture("pipeBase");
 
-            topPipe = flipVertical(topPipe);
+        topPipe = flipVertical(topPipe);
 
-            topPipe = scaleManager.scaledImage(topPipe, game.TILE_SIZE, game.TILE_SIZE);
-            bottomPipe = scaleManager.scaledImage(bottomPipe, game.TILE_SIZE, game.TILE_SIZE);
-            basePipe = scaleManager.scaledImage(basePipe, game.TILE_SIZE, game.TILE_SIZE);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        topPipe = scaleManager.scaledImage(topPipe, game.TILE_SIZE, game.TILE_SIZE);
+        bottomPipe = scaleManager.scaledImage(bottomPipe, game.TILE_SIZE, game.TILE_SIZE);
+        basePipe = scaleManager.scaledImage(basePipe, game.TILE_SIZE, game.TILE_SIZE);
     }
 
     public BufferedImage flipVertical(BufferedImage image)

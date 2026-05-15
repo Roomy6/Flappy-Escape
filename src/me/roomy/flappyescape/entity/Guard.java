@@ -67,7 +67,7 @@ public class Guard extends Entity
 
     public void getImage()
     {
-        guard = game.textureManager.getTexture("Guard");
+        guard = game.textureManager.getTexture("guard");
     }
 
     public void update()

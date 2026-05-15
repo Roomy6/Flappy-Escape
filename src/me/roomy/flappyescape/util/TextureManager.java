@@ -23,7 +23,15 @@ public class TextureManager
 
     private void loadTextures()
     {
-        loadTexture("Player", "/player.png");
+        loadTexture("player", "/player.png");
+        loadTexture("guard", "/guard.png");
+
+        loadTexture("pipeTop", "/pipeTop.png");
+        loadTexture("pipeBase", "/pipeBase.png");
+
+        loadTexture("background", "/background.png");
+        loadTexture("ground", "/ground.png");
+        loadTexture("prison", "/prison.png");
     }
 
     /* Load texture and store in memory */

@@ -130,7 +130,7 @@ public class Player extends Entity
 
     public void getImage()
     {
-        player = game.textureManager.getTexture("Player");
+        player = game.textureManager.getTexture("player");
     }
 
     public void rotatePlayer()

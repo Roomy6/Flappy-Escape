@@ -19,8 +19,6 @@ public class Entity
     public float yVelocity, xVelocity;
     public float rotationAngle, rotationSpeed;
 
-    public BufferedImage dummy;
-
     public String action;
     public int actionCooldown = 0;
 

@@ -19,9 +19,9 @@ public class BackgroundManager
     {
         this.game = game;
 
-        backgroundImage = loadBackground("/background");
-        groundImage = loadBackground("/ground");
-        prisonImage = loadBackground("/prison");
+        backgroundImage = game.textureManager.getTexture("background");
+        groundImage = game.textureManager.getTexture("ground");
+        prisonImage = game.textureManager.getTexture("prison");
 
         setupBackground();
     }
@@ -78,19 +78,5 @@ public class BackgroundManager
         {
             g2.drawImage(prisonImage, (int)prisonX, GamePanel.WINDOW_HEIGHT - prisonImage.getHeight(), null);
         }
-    }
-
-    public BufferedImage loadBackground(String path) {
-        ScaleManager scaleManager = new ScaleManager();
-        BufferedImage image = null;
-
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream(path + ".png"));
-            image = scaleManager.scaledImage(image, image.getWidth(), image.getHeight());
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-
-        return image;
     }
 }

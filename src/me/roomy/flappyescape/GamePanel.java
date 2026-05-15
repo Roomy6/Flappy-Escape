@@ -35,10 +35,10 @@ public class GamePanel extends JPanel implements Runnable
     public KeyHandler keyHandler = new KeyHandler(this);
 
     /* Managers */
+    public TextureManager textureManager = new TextureManager(this);
     public ObjectSetter objectSetter = new ObjectSetter(this);
     public CollisionManager collisionManager = new CollisionManager(this);
     public BackgroundManager backgroundManager = new BackgroundManager(this);
-    public TextureManager textureManager = new TextureManager(this);
 
     /* Entities and Objects */
     public Player player = new Player(this, keyHandler);
