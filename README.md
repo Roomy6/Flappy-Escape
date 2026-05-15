@@ -20,3 +20,4 @@ A list of things I'm working on.
 - [ ] Make Game Over screen
 - [ ] Implement score system
 - [x] Add Guard NPC
+- [ ] Better collision manager
